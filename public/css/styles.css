@@ -1,0 +1,340 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.desc img {
+    max-width: 100%;
+}
+.error{
+    color: red;
+    font-size: 0.9em;
+}
+.status-product-detail {
+    margin: 10px 0;
+}
+
+.color-product {
+    margin: 15px 0;
+}
+footer{
+    background-image: url(../image/1/bg-shop.png);
+}
+.row{
+    margin: 0px!important;
+}
+body{
+    background: #EFF0F3;
+}
+body a{
+    color: blue;
+    text-decoration: none;
+}
+body a:hover{
+    color:  yellow;
+    text-decoration: none;
+}
+                        /* Danh Mục */
+.san-pham {
+    padding: 11px 0px;
+    margin: 15px 0;
+    border-bottom: 2px solid #31B0D5;
+}
+
+.san-pham span {
+    background: #31B0D5;
+    padding: 15px 10px;
+    color: white;
+}
+            /* --------------------------------- */
+
+
+
+.header-top{
+    background: #F34111;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+}
+
+                                        /* Địa Chỉ Số Đt */
+
+.left-header-top a{
+    color: white;
+}
+
+                                                /* Menu Ngang */
+
+.right-header-top ul{
+    text-align: right;
+}
+.right-header-top ul li{
+    display: inline;
+    list-style: none;
+}
+.right-header-top ul li a{
+    color: white;
+    padding: 12px 20px;
+}
+
+
+.header-mid{
+    background-color: #FF5622;
+    padding-top: 15px;
+}
+
+                                    /* Tìm Kiếm */
+.search {
+    margin-top: 15px;
+}
+.search span {
+    position: absolute;
+    right: 23px;
+    bottom: 6px;
+    color: #FF5622;
+}
+.search input{
+    width: 100%;
+    border: none;
+    padding: 10px; 
+    border-radius: 2px;
+    position: relative;   
+    max-width: 100%;  
+    outline: none;
+}
+.search input::placeholder{
+    color: #FF5622;
+}
+
+                            /* Màng Hình Máy Tính Bảng */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .product-btn .btn{
+        font-size: 0.7em;
+    }
+    .left-header-top{
+        font-size: 0.9em;
+    }
+}
+
+                        /* Màn Hình di Động */
+
+@media (max-width: 1000px) {
+    .banner-top{
+        display: none;
+    }
+    .left-header-top{
+        display: none;
+    }
+    .logo{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .search span{
+        font-size: 10px;
+        width: 97px;
+        padding: 11px 20px;
+        margin-left: -100px;
+        cursor: pointer;
+        text-align: center;
+    }
+    .menu{
+        display: none;
+    }
+    .search{
+        width: 80%;
+        float: left;
+    }
+    .cart{
+        width: 20%;
+        float: left;
+    }
+    .cart span{
+        display: none;
+    }
+    .cart-product{
+        display: none;
+        margin-left: -200px;
+    }
+    .category-left{
+        height: auto!important;
+    }
+    .hot-product{
+        display: none;
+    }
+}
+
+                                            /* Menu */
+
+.menu ul li{
+    float: left;
+    position: relative;
+    list-style: none;
+    padding-right: 20px;
+}
+.menu ul li > ul{
+    display: none;
+    position: absolute;
+}
+.menu a{
+    color: #fff;
+    background: #FF5622;
+    text-transform: uppercase;
+}
+.menu ul li:hover .sub-menu{
+    display: block;
+    padding: 10px;
+    background: #FF5622;
+    border-radius: 3px;
+    z-index: 1000;
+}
+.sub-menu li{
+    color: #fff;
+    background: #FF5622;
+    margin: 5px 0;
+}
+.menu {
+    margin-top: 27px;
+}
+
+                                            /* Cart */
+
+.cart a{
+    color: white;
+    position: relative;
+}
+.cart{
+    margin-top: 20px;
+    padding: 0 20px;
+}
+.cart .fa-shopping-cart{
+    font-size: 2em;
+}
+.cart .product-cart{
+    display: none;
+    position: absolute;
+}
+.cart:hover .product-cart{
+    display: block;
+    color: #fff;
+    z-index: 10;
+    background: rgb(255, 255, 255);
+    color: #FF5622;
+    padding: 20px 5px;
+    width: 100%;
+    margin-left: -20px;
+    border: 1px solid #FF5622;
+    border-radius: 3px;
+}
+
+                                             /* top-content */
+
+.banner-category,.content{
+    background: #EFF0F3;
+}
+.search input:focus{
+    box-shadow: none!important;
+}
+#top {
+    width: 60px; height: 60px; 
+    position: fixed; bottom:0px; right: 0px; 
+    text-indent: -99999px;
+    cursor: pointer;
+    background: url(https://hamrongmedia.com//wp-content/themes/hrm/images/totop.png) no-repeat 0 0;
+}
+                                            /* Category */
+
+.category {
+    background: #D7102C;
+    padding: 12px 15px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.item-category{
+    padding: 12px 15px;
+}
+.item-category:hover{
+    background: #FF5622;
+    color: #fff;
+}
+.category-left{
+    background: white;
+    height: 428px;
+}
+.category-left a{
+    color: #555;
+    width: 100%;
+    padding: 0 60px 0px 0px;
+    text-transform: uppercase;
+}
+.item-category:hover a{
+    color: white;
+}
+
+                                        /* Product */
+
+.product{
+    background: white;
+    margin: 20px 0px;
+    padding: 15px;
+}
+.info-product{
+    padding: 10px;
+}
+.product-name a{
+    color: #FF5622;
+    text-align: center;
+    text-transform: uppercase;
+}
+.product-name a:hover{
+    color: #FF5622;
+}
+.product-star{
+    color: yellow;
+    margin-bottom: 10px;
+}
+.product-btn{
+    margin-top: 10px;
+}
+.product-btn .btn-success{
+    float: right;
+}
+.product-image{
+    overflow: hidden;
+}
+.product:hover img{
+    transition: all ease-in-out 0.5s;
+    transform: scale(1.1);
+}
+.product-image img{
+    transition: all ease-in-out 0.5s;
+}
+.w3-teal, .w3-hover-teal:hover{
+    color: white;
+    background: #FF5622!important;
+}
+.view{
+    color: red;
+    font-size: 0.8em;
+}
+footer{
+    color: white;
+    padding: 15px 0;
+}
+.product-detail{
+    padding: 15px 0px;
+}
+.sub-image-detail{
+    margin: 15px 0px;
+}
+.main-color{
+    color: #FF5622;
+}
+
+.about-us {
+    margin-bottom: 7px;
+}
+.price-product-detail span {
+    font-size: 1.5em;
+}
