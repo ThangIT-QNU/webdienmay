@@ -14,8 +14,11 @@
     <!-- Bootstrap Core CSS -->
     <link href="public/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="public/css/footer.css">
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+
+
 </head>
 
 <body>
@@ -29,7 +32,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="left-header-top">
-                            Đồ Án Web Bán Hàng Công Nghệ - Nhóm 1
+                            Đồ Án Web Bán Hàng Công Nghệ - Nhóm 6
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -50,7 +53,7 @@
                                 <span class="login-logout">
                                     <li><a title="Đăng nhập" href="login.php"><i class="fa fa-user"></i> Đăng nhập</a>
                                     </li>
-                                    <li><a title="Đăng kí" href="register.php"><i class="fa fa-lock"></i> Đăng kí</a>
+                                    <li><a title="Đăng kí" href="register.php"><i class="fa fa-lock"></i> Đăng ký</a>
                                     </li>
                                 </span>
                                 <?php
