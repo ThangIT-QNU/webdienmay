@@ -56,31 +56,71 @@
         </div>
     </div>
 </div>
-<footer>
-    <div class="bot-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <center style="margin-bottom: 20px;">
-                        <h3 style="margin-top:0px!important">Thông Tin Nhóm 1</h3>
-                    </center>
-                </div>
-            </div>
-            
+
+<footer class="footer-distributed">
+    <div class="footer-left">
+        <h3>Phát Triển Phần Mềm <br> Mã Nguồn Mở<span> Nhóm 6</span></h3>
+        <p class="footer-links">
+            <a href="#">Trang Chủ</a>&ensp;
+            <a href="#">Giới Thiệu</a>&ensp;
+            <a href="#">Hỗ Trợ</a>&ensp;
+            <a href="#">Liên Hệ</a>
+        <p class="footer-company-name">Copyright &copy; 2020 Apple. All rights reserved. </p>
+    </div>
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>65 Ngô Mây</span> TP.Quy Nhơn - Bình Định.</p>
+        </div>
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>0356 536 663</p>
+        </div>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:mtpthang829@gmail.com">mtpthang829@gmail.com</a></p>
         </div>
     </div>
+    <div class="footer-right">
+        <p class="footer-company-about">
+            <span>Về Công Ty</span>
+            Chuyên Kinh Doanh Các Mặt Hàng Điện Thoại, Lap Top, Máy Tính Bảng Và Một Số Phụ Kiện Giá
+            Rẻ, Uy Tín, Chất Lượng.
+        </p>
+        <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+        </div>
+
 </footer>
+
 <script src="public/js/scripts.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+<script src="https://kit.fontawesome.com/4ff1ce10f2.js" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
-       
-     $('#top').click(function() {
-       $('html, body').animate({scrollTop:0},500);
-     });
-   });
+$(document).ready(function() {
+
+    $('#top').click(function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
+    });
+});
 </script>
 </body>
 
