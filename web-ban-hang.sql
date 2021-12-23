@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1:3306
--- Thời gian đã tạo: Th10 28, 2020 lúc 07:12 AM
--- Phiên bản máy phục vụ: 5.7.31
--- Phiên bản PHP: 7.3.21
+-- Hôte : 127.0.0.1
+-- Généré le : jeu. 23 déc. 2021 à 04:21
+-- Version du serveur :  10.4.14-MariaDB
+-- Version de PHP : 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,48 +18,57 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `web-ban-hang`
+-- Base de données : `web-ban-hang`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `bill`
+-- Structure de la table `bill`
 --
 
-DROP TABLE IF EXISTS `bill`;
-CREATE TABLE IF NOT EXISTS `bill` (
-  `id_bill` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `bill` (
+  `id_bill` int(11) NOT NULL,
   `id_customer` int(11) NOT NULL,
-  `status` tinyint(4) NOT NULL DEFAULT '0',
+  `status` tinyint(4) NOT NULL DEFAULT 0,
   `bill_detail` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'STT,name,price,so luong,thanhtien,===tong tien',
   `ghichu` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id_bill`)
-) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `bill`
+-- Déchargement des données de la table `bill`
 --
 
 INSERT INTO `bill` (`id_bill`, `id_customer`, `status`, `bill_detail`, `ghichu`, `created_at`) VALUES
-(68, 65, 1, 'oppo-reno-10x-zoom-edition-black-400x460.png,Điện thoại OPPO Reno 10x Zoom Edition,20990000,2,41980000????oppo-reno-pink-400x460.png,Điện thoại OPPO Reno,12990000,1,12990000????oppo-r17-pro-2-400x460.png,Điện thoại OPPO R17 Pro,10490000,1,10490000===65460000', 'TY', '2020-10-15 06:51:45');
+(71, 67, 1, 'oppo-reno-pink-400x460.png,Điện thoại OPPO Reno,12990000,2,25980000????op-lung-oppo-a5s-nhua-deo-woven-osmia-navy-1-600x600.jpg,Ốp lưng Oppo A5s nhựa dẻo Woven OSMIA Navy\r\n,70000,1,70000===26050000', 'kvbuku', '2021-05-28 13:53:54'),
+(72, 68, 1, 'oppo-reno-pink-400x460.png,Điện thoại OPPO Reno,12990000,1,12990000===12990000', '', '2021-06-01 01:39:42'),
+(73, 68, 1, 'oppo-reno-pink-400x460.png,Điện thoại OPPO Reno,12990000,2,25980000????iphone-8-plus-1-400x460.png,Điện thoại iPhone 8 Plus 64GB,19990000,1,19990000===45970000', 'dhfchn', '2021-10-16 09:51:10'),
+(74, 68, 1, 'oppo-reno-pink-400x460.png,Điện thoại OPPO Reno,12990000,1,12990000===12990000', 'af', '2021-10-31 07:03:18'),
+(75, 69, 1, 'apple-macbook-air-mqd32sa-a-i5-5350u-600x600.jpg,Laptop Apple MacBook Air 2017 i5 1.8GHz/8GB/128GB (MQD32SA/A),22000000,3,66000000????oppo-r17-pro-2-400x460.png,Điện thoại OPPO R17 Pro,10490000,1,10490000===76490000', '', '2021-11-18 16:22:40'),
+(76, 70, 0, 'oppo-reno-pink-400x460.png,Điện thoại OPPO Reno,12990000,1,12990000????oppo-r17-pro-2-400x460.png,Điện thoại OPPO R17 Pro,10490000,1,10490000===23480000', '', '2021-11-18 16:25:11'),
+(77, 70, 0, 'oppo-reno-pink-400x460.png,Điện thoại OPPO Reno,12990000,2,25980000===25980000', '', '2021-11-18 17:29:31'),
+(78, 71, 0, 'oppo-reno-pink-400x460.png,Điện thoại OPPO Reno,12990000,1,12990000===12990000', 'sadaasc', '2021-11-19 03:10:27'),
+(79, 71, 1, 'oppo-f9-tim-400x460.png,Điện thoại OPPO F9,5400000,1,5400000===5400000', 'sgag', '2021-11-19 07:37:21'),
+(80, 71, 1, 'oppo-reno-pink-400x460.png,Điện thoại OPPO Reno,12990000,2,25980000????oppo-f9-tim-400x460.png,Điện thoại OPPO F9,5400000,1,5400000===31380000', '', '2021-12-11 15:14:36'),
+(81, 71, 1, 'oppo-reno-10x-zoom-edition-black-400x460.png,Điện thoại OPPO Reno 10x Zoom Edition,20990000,1,20990000===20990000', '', '2021-12-12 02:18:12'),
+(82, 71, 0, 'oppo-reno-pink-400x460.png,Điện thoại OPPO Reno,12990000,1,12990000===12990000', '', '2021-12-12 02:51:49'),
+(83, 71, 0, 'oppo-reno-pink-400x460.png,Điện thoại OPPO Reno,12990000,1,12990000===12990000', '', '2021-12-19 17:16:46'),
+(84, 71, 0, 'oppo-reno-pink-400x460.png,Điện thoại OPPO Reno,12990000,1,12990000===12990000', '', '2021-12-21 13:56:59');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `category`
+-- Structure de la table `category`
 --
 
-DROP TABLE IF EXISTS `category`;
-CREATE TABLE IF NOT EXISTS `category` (
-  `cate_id` int(11) NOT NULL AUTO_INCREMENT,
-  `cate_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`cate_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+CREATE TABLE `category` (
+  `cate_id` int(11) NOT NULL,
+  `cate_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `category`
+-- Déchargement des données de la table `category`
 --
 
 INSERT INTO `category` (`cate_id`, `cate_name`) VALUES
@@ -72,66 +81,78 @@ INSERT INTO `category` (`cate_id`, `cate_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `comment`
+-- Structure de la table `comment`
 --
 
-DROP TABLE IF EXISTS `comment`;
-CREATE TABLE IF NOT EXISTS `comment` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `comment` (
+  `id` int(11) NOT NULL,
   `id_products` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `comment` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `created_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `comment`
+-- Déchargement des données de la table `comment`
 --
 
 INSERT INTO `comment` (`id`, `id_products`, `name`, `comment`, `created_at`) VALUES
 (79, 1, 'Phạm Văn Hiệu', 'hay', '2019-12-16 11:39:20'),
-(80, 1, 'Phạm Văn Hiệu', 'hay', '2019-12-16 11:39:24');
+(80, 1, 'Phạm Văn Hiệu', 'hay', '2019-12-16 11:39:24'),
+(81, 2, 'thang', 'Chnas qua', '2021-10-16 09:50:11'),
+(82, 2, 'thang', 'ĐT đẹp quá!', '2021-10-16 09:54:21'),
+(83, 5, 'thang', 'shxnhnfgc', '2021-10-16 09:56:02'),
+(84, 5, 'thang', 'nvc n', '2021-10-16 09:56:05'),
+(85, 5, 'thang', 'ch 🤗', '2021-10-16 09:56:14'),
+(86, 2, 'Khách', 'hi', '2021-11-14 08:37:50'),
+(87, 2, 'Khách', 'Xấu quá!', '2021-11-14 13:09:39'),
+(88, 30, 'Khách', 'tường', '2021-11-14 15:03:13'),
+(89, 30, 'Khách', 'tường', '2021-11-14 15:03:17'),
+(90, 30, 'Khách', 'trương', '2021-11-14 15:03:58'),
+(91, 30, 'Khách', 'hihi', '2021-11-14 15:53:38'),
+(92, 2, 'Khách', 'gdfghf', '2021-11-19 05:41:06');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `customer`
+-- Structure de la table `customer`
 --
 
-DROP TABLE IF EXISTS `customer`;
-CREATE TABLE IF NOT EXISTS `customer` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `customer` (
+  `id` int(11) NOT NULL,
   `fullname` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `phone` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `address` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `address` text COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `customer`
+-- Déchargement des données de la table `customer`
 --
 
 INSERT INTO `customer` (`id`, `fullname`, `phone`, `email`, `address`) VALUES
-(64, 'Phạm Văn Hiệu', '0359003130', 'vanhieutdc6@gmail.com', '143/12 đường 11, phường Trường Thọ,quận Thủ Đức,tp.Hồ Chí Minh'),
-(65, 'twqtrewtrqtrrqt', 'ẺYE', 'RYTRYER@FDGDFS', 'ẺYER');
+(64, 'Đinh Thành Thắng', '0356536663', 'thangitqnu@gmail.com', '68 Hàm Nghi, Ngô Mây'),
+(65, 'Đinh Thành Thắng', '0356536663', 'thangitqnu@gmail.com', '68 Hàm Nghi, Ngô Mây'),
+(66, 'Đinh Thành Thắng', '0356536663', 'thangitqnu@gmail.com', '68 Hàm Nghi, Ngô Mây'),
+(67, 'Đinh Thành Thắng', '0356536663', 'thangitqnu@gmail.com', '68 Hàm Nghi, Ngô Mây'),
+(68, 'Đinh Thành Thắng', '0356536663', 'thangitqnu@gmail.com', '68 Hàm Nghi, Ngô Mây'),
+(69, 'Đinh Thành Thắng', '0356536663', 'thangitqnu@gmail.com', '68 Hàm Nghi, Ngô Mây'),
+(70, 'Đinh Thành Thắng', '0356536663', 'thangitqnu@gmail.com', '68 Hàm Nghi, Ngô Mây'),
+(71, 'Đinh Thành Thắng', '0356536663', 'thangitqnu@gmail.com', '68 Hàm Nghi, Ngô Mây');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `manufactures`
+-- Structure de la table `manufactures`
 --
 
-DROP TABLE IF EXISTS `manufactures`;
-CREATE TABLE IF NOT EXISTS `manufactures` (
-  `manu_id` int(11) NOT NULL AUTO_INCREMENT,
-  `manu_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`manu_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+CREATE TABLE `manufactures` (
+  `manu_id` int(11) NOT NULL,
+  `manu_name` varchar(100) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `manufactures`
+-- Déchargement des données de la table `manufactures`
 --
 
 INSERT INTO `manufactures` (`manu_id`, `manu_name`) VALUES
@@ -144,12 +165,11 @@ INSERT INTO `manufactures` (`manu_id`, `manu_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `products`
+-- Structure de la table `products`
 --
 
-DROP TABLE IF EXISTS `products`;
-CREATE TABLE IF NOT EXISTS `products` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `price` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -157,16 +177,15 @@ CREATE TABLE IF NOT EXISTS `products` (
   `hot` tinyint(4) NOT NULL,
   `sale` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `manu_id` int(11) NOT NULL,
-  `cate_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=78 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `cate_id` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `products`
+-- Déchargement des données de la table `products`
 --
 
 INSERT INTO `products` (`id`, `name`, `price`, `image`, `description`, `hot`, `sale`, `manu_id`, `cate_id`) VALUES
-(1, 'Điện thoại OPPO Reno 10x Zoom Edition', '20990000', 'oppo-reno-10x-zoom-edition-black-400x460.png', 'Những chiếc flagship trong năm 2019 không chỉ có một camera chụp ảnh đẹp, chụp xóa phông ảo diệu mà còn phải \"chụp thật xa\" và với chiếc OPPO Reno 10x Zoom Edition chính thức gia nhập thị trường \"smartphone có camera siêu zoom\".', 1, '17990000', 3, 1),
+(1, 'Điện thoại OPPO Reno 10x Zoom Edition', '20990000', 'oppo-reno-10x-zoom-edition-black-400x460.png', '<p><strong>Những chiếc flagship trong năm 2019 kh&ocirc;ng chỉ c&oacute; một camera chụp ảnh đẹp, chụp x&oacute;a ph&ocirc;ng ảo diệu m&agrave; c&ograve;n phải &quot;chụp thật xa&quot; v&agrave; với chiếc OPPO Reno 10x Zoom Edition ch&iacute;nh thức gia nhập thị trường &quot;smartphone c&oacute; camera si&ecirc;u zoom&quot;.</strong></p>\r\n', 1, '17990000', 3, 1),
 (2, 'Điện thoại OPPO Reno', '12990000', 'oppo-reno-pink-400x460.png', 'Những năm gần đây OPPO luôn tạo được dấu ấn trên các sản phẩm mới của mình và smartphone vừa ra mắt OPPO Reno là một ví dụ điển hình.\r\n', 1, '10990000', 3, 1),
 (3, 'Điện thoại OPPO R17 Pro', '10490000', 'oppo-r17-pro-2-400x460.png', 'Đặc điểm nổi bật của OPPO R17 Pro\r\nTìm hiểu thêmOPPO R17 Pro được xem là chiếc ện đại, c', 0, '10000000', 3, 1),
 (4, 'Điện thoại OPPO A3s', '3390000', 'oppo-a3s-32gb-400x460.png', 'OPPO A3s 32GB là một chiếc smartphone mới của OPPO sở hữu giá rẻ hiếm hoi nhưng vẫn được trang bị màn hình tai thỏ và camera kép xu thế của năm 2018.', 0, '3000000', 3, 1),
@@ -221,40 +240,142 @@ INSERT INTO `products` (`id`, `name`, `price`, `image`, `description`, `hot`, `s
 (53, 'Bút cảm ứng Apple Pencil\r\n', '2990000', 'apple-pencil-10-400x460.png', 'Bút cảm ứng Apple Pencil không sử dụng cho iPad Pro 11inch và iPad dùng cổng sạc Type C', 0, '2000000', 1, 5),
 (54, 'Tai nghe Bluetooth AirPods 2 Apple MV7N2 Trắn', '5990000', 'tai-nghe-bluetooth-airpods-2-apple-mv7n2-trang-avatar-1-600x600.jpg', 'hiết kế đơn giản, thời trang và nhỏ gọn.\r\nTrang bị chip H1 hoàn toàn mới, cho tốc độ kết nối, chuyển đổi giữa các thiết bị nhanh chóng.\r\nKích hoạt nhanh trợ lý ảo Siri bằng cách nói \"Hey, Siri\".\r\nCó thể sử dụng nghe nhạc lên đến 5 giờ (âm lượng 50%) cho mỗi một lần sạc đầy.\r\nTích hợp công nghệ sạc nhanh hiện đại. Sạc nhanh 15 phút có thể nghe nhạc 3 giờ (âm lượng 50%).\r\nSử dụng song song với hộp sạc có thể dùng được lên đến 24 giờ.\r\nTính năng nhận cuộc gọi, kích hoạt Siri, nghe hoặc tạm dừng đoạn nhạc đang phát.\r\nSản phẩm chính hãng Apple, nguyên seal 100%.\r\nLưu ý: Thanh toán trước khi mở seal.', 1, '5000000', 1, 5),
 (55, 'Kính thực tế ảo Samsung Gear VR3\r\n', '2490000', 'kinh-thuc-te-ao-samsung-gear-vr-sm-r325-400x400.png', 'Kính thực tế ảo Samsung Gear VR3 mang đến cho bạn một trải nghiệm chưa từng có, nơi mà bạn sẽ được đắm chìm trong những thứ mà trước đây bạn chỉ có thể tưởng tượng mà thôi.', 1, '2000000', 2, 5),
-(56, 'Combo phụ kiện Galaxy S5 option 2\r\n', '500000', 'com-bo-phu-kien-s5-300-2-nowatermark-300x300.jpg', 'combo phụ kiện samsung', 0, '100000', 2, 5),
+(56, 'Combo phụ kiện Galaxy S5 option 2', '500000', 'com-bo-phu-kien-s5-300-2-nowatermark-300x300.jpg', '', 0, '100000', 2, 5),
 (57, 'Dây đeo Samsung Galaxy Watch Active R500\r\n', '650000', 'day-samsung-galaxy-watch-active-samsung-r500-den-avatar-600x600.jpg', 'Dây đeo thiết kế sang trọng, màu sắc trẻ trung và hiện đại.\r\nDây đeo được làm từ chất liệu cao su tổng hợp, có độ dẻo dai, linh hoạt và độ bền rất cao.\r\nSản phẩm có nhiều màu sắc cho bạn chọn lựa và thay đổi.', 1, '600000', 2, 5),
 (58, 'Chuột quang có dây Asus UT210\r\n', '350000', 'Chuot-quang-co-day-Asus-UT210-l.jpg', 'Chuot-quang-co-day-Asus-UT210-l.jpg', 0, '200000', 4, 5),
-(59, 'Asus Zenwatch WI500Q\r\n', '1000000', 'asus-zenwatch-wi500q-400x460.png', 'Asus Zenwatch WI500Q - Smartwatch mới đến từ Asus', 1, '890000', 4, 4),
+(59, 'Asus Zenwatch WI500Q', '1000000', 'asus-zenwatch-wi500q-400x460.png', '<p><u><em><strong><span style=\"background-color:#2ecc71\">Asus Zenwatch WI500Q - Smartwatch mới đến từ Asus</span></strong></em></u></p>\r\n', 1, '890000', 4, 4),
 (60, 'Ốp lưng Oppo A5s nhựa dẻo Woven OSMIA Navy\r\n', '70000', 'op-lung-oppo-a5s-nhua-deo-woven-osmia-navy-1-600x600.jpg', 'Kiểu dáng thời trang và đẹp mắt\r\nThiết kế vừa vặn và ôm sát thân máy\r\nDễ dàng tháo/lắp ốp vào máy', 1, '69000', 3, 5),
-(61, 'Ốp lưng Oppo F1s Nhựa hình thú OSMIA Sao Hồng\r\n', '50000', 'op-lung-oppo-f1s-nhua-hinh-thu-osmia-ck160938-sao-avatar--300x300.jpg', 'Chất liệu nhựa, kiểu dáng thời trang và đẹp mắt.\r\nThiết kế vừa vặn và ôm sát thân máy.\r\n Dễ dàng tháo/lắp ốp vào máy.', 0, '20000', 3, 5);
+(61, 'Ốp lưng Oppo F1s Nhựa hình thú OSMIA Sao Hồng', '50000', 'op-lung-oppo-f1s-nhua-hinh-thu-osmia-ck160938-sao-avatar--300x300.jpg', '<p><strong>Chất liệu nhựa, kiểu d&aacute;ng thời trang v&agrave; đẹp mắt. Thiết kế vừa vặn v&agrave; &ocirc;m s&aacute;t th&acirc;n m&aacute;y. Dễ d&agrave;ng th&aacute;o/lắp ốp v&agrave;o m&aacute;y.</strong></p>\r\n', 0, '20000', 3, 5);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `user`
+-- Structure de la table `user`
 --
 
-DROP TABLE IF EXISTS `user`;
-CREATE TABLE IF NOT EXISTS `user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
   `username` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `fullname` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
   `address` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `phone` varchar(15) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `level` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1:user,2:admin',
-  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '0:off,1:on',
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `OTP` varchar(11) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `level` tinyint(1) NOT NULL DEFAULT 1 COMMENT '1:user,2:admin',
+  `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT '0:off,1:on'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `user`
+-- Déchargement des données de la table `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `password`, `fullname`, `address`, `phone`, `email`, `level`, `status`) VALUES
-(39, 'admin', '$2y$10$A4dTY6BDrCAp1ZHUukVFxezcPc28xDtDqJ.2XzDS0mxmpNA2wIes.', 'Đinh Thành Đức', 'Cao Đẳng Công Nghệ Thủ Đức', '(+84) 3447543XX', 'kyojitachabana@gmail.com', 2, 1),
-(38, 'admin1', '$2y$10$bM8.fC7ilef05Izq36uf4O7kanUa8dWyoJ15DT07aijNf1.yJHGwq', 'Đinh Thành Đức', 'Cao Đẳng Công Nghệ Thủ Đức', '(+84) 3447543XX', 'kyojitachabana@gmail.com', 2, 1);
+INSERT INTO `user` (`id`, `username`, `password`, `fullname`, `address`, `phone`, `email`, `OTP`, `level`, `status`) VALUES
+(53, 'thang@123456', '$2y$10$UGard0eZrYttdbFc1KTXFO5CCGMnivnqSPD2P5I5H4G5g/D3J1.SG', '', '', '', '', '', 1, 1),
+(40, 'thang123', '123456789', '', '', '', '', '', 2, 1),
+(41, 'thang123456789', '$2y$10$fRwEx.Ij176pnPkDcA8/n.Ce4w/hFsCZSBm8mp8UvLwwaU8crp2.m', 'DINH THANH THANG', '123', '0989725994', 'mtpthang849@gmail.com', '', 1, 1),
+(42, 'thang', '$2y$10$.i.D658v3yKPhlSuZ6U3JuvWymUz4DTJ32IpYvSiU.TEDz9fmSJrW', '', '', '', '', '', 1, 1),
+(43, 'thag', '$2y$10$cRbrfp5BZOpnl.rqLg.TnuUTln73VsofgERxc4PTEzhO1wrdwmjZe', '', '', '', '', '', 1, 1),
+(44, 'thang1234', '123456', 'hyk', 'gnf', 'n', 'phuocsang5s147@gmail.com', 'M7T2FV', 1, 1),
+(45, 'thang12345', '8JCIUD', 'Đinh Thành Thắng', 'Nhà', '0989725994', 'dinhthanhthang2007@gmail.com', 'VY0XHF', 1, 1),
+(52, 'thang@12345', '123456', 'Đinh Thành Thắng', '68 Hàm Nghi, Ngô Mây', '0356536663', 'mtpthang829@gmail.com', '9FW4LK', 1, 1),
+(47, 'thang12', '$2y$10$0znu5YTWJgzh4lkQm0yIneXi/b7LBtBmHmkI8FpIWUOWGBHkwNiMa', '', '', '', '', '', 2, 1),
+(48, 'thag123', '$2y$10$L72ZZZCRl9NqQj3aulmpMucX3G9ne5xN39LbFTK5rhxurEIWhZGLK', '', '', '', '', '', 1, 1),
+(49, 'thang12345123', '$2y$10$.Rg8ibLjIJ800TS.gD4d1exLwH1mzSwzWZ9IKLe1VpFDElkqNqXQ.', '', '', '', '', '', 1, 1),
+(50, 'thang12345', 'thang12345', 'thang12345', 'thang12345', '', '', '', 2, 1),
+(51, 'user12345', '$2y$10$CXRXEH61Gpo5W6CMRH3nbOSZwQWADmr5uU2UpqW2RSPp3IFG97bwu', '', '', '', '', '', 1, 1);
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `bill`
+--
+ALTER TABLE `bill`
+  ADD PRIMARY KEY (`id_bill`);
+
+--
+-- Index pour la table `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`cate_id`);
+
+--
+-- Index pour la table `comment`
+--
+ALTER TABLE `comment`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `customer`
+--
+ALTER TABLE `customer`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `manufactures`
+--
+ALTER TABLE `manufactures`
+  ADD PRIMARY KEY (`manu_id`);
+
+--
+-- Index pour la table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `bill`
+--
+ALTER TABLE `bill`
+  MODIFY `id_bill` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
+
+--
+-- AUTO_INCREMENT pour la table `category`
+--
+ALTER TABLE `category`
+  MODIFY `cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
+-- AUTO_INCREMENT pour la table `comment`
+--
+ALTER TABLE `comment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+
+--
+-- AUTO_INCREMENT pour la table `customer`
+--
+ALTER TABLE `customer`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+
+--
+-- AUTO_INCREMENT pour la table `manufactures`
+--
+ALTER TABLE `manufactures`
+  MODIFY `manu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- AUTO_INCREMENT pour la table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+
+--
+-- AUTO_INCREMENT pour la table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
