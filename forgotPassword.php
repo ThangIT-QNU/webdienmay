@@ -74,7 +74,7 @@ try {
     if(mysqli_num_rows($verifyQuery)) {
         $sqlUpdate = "UPDATE user SET OTP = '$code' WHERE email = '$email'";
         $codeQuery = mysqli_query($conn ,$sqlUpdate);
-        $mail->send()
+        $mail->send();
         echo "<script>
                     alert('Mã xác nhận đã gửi đến E-mail của bạn vui lòng xác nhận.');
                     window.location.href='http://localhost/webdienmay/code.php?email=$email';
