@@ -19,7 +19,7 @@ if(isset($_GET['phone'])){
     $sql = "SELECT * FROM customer WHERE phone=''$phone";
     $num = count($customer->getCustomerByPhone($phone));
     if($num > 0){
-        $sql = "UPDATE customer SET fullname='$fullname',phone='$phone',address='$address',email='$email'";
+        $sql = "UPDATE customer SET fullname='$fullname',address='$address',email='$email' WHERE phone='$phone'";
         $db->SIUD($sql);
     }else{
         $sql = "INSERT INTO customer(fullname,phone,address,email) VALUES('$fullname','$phone','$address','$email')";
@@ -69,7 +69,7 @@ $checkout = $_SESSION['cart'];
                     <td><?php echo number_format($value_cart['price']) ; ?> đ</td>
                     <td><?php echo $_SESSION['cart'][$key]; ?></td>
                     <td><?php echo number_format($t = $value_cart['price'] * $_SESSION['cart'][$key])  ?> đ</td>
-                    
+
                 </tr>
                 <?php
                     if($desc_bill == NULL){
