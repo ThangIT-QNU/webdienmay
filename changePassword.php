@@ -38,7 +38,9 @@ require 'layout/footer.php';
             $code = substr(str_shuffle('1234567890QWERTYUIOPASDFGHJKLZXCVBNM'),0,6);
             if($passWord == $rePassWord)
             {   
-                $sql = "UPDATE user set password = '$passWord' where OTP = '$code1' AND email = '$email'";
+                
+                $password_hash = password_hash($rePassWord,PASSWORD_DEFAULT);
+                $sql = "UPDATE user SET password = '$password_hash' where OTP = '$code1' AND email = '$email'";
                 $query = mysqli_query($conn,$sql) or die('Connect Data Fail!');
                 if($query)
                 {
