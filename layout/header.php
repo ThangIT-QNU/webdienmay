@@ -22,6 +22,7 @@ if(!isset($_SESSION)) { session_start(); }
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
 
 
+
 </head>
 
 <body>
@@ -43,20 +44,25 @@ if(!isset($_SESSION)) { session_start(); }
                             <ul>
                                 <?php
                                     if(isset($_SESSION['user'])){
-                                        
-                                        ?>
-                                <a href="profile.php" title="User"><span class="account">
-                                        <li><i class="fa fa-user"></i> <?php echo $_SESSION['user'] ?></a> -<a
-                                    title="Đăng Xuất" href="logout.php" style="font-size:0.9em">Đăng Xuất</a></li>
-                                </span>
-
-                                <?php
+                                
+                                    echo "<div class='dropdown'>
+                        <button class='btn btn-success dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                        <i class='fas fa-user-alt'></i>&nbsp; ".$_SESSION['user']."
+                        </button>
+                        <div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
+                          <a class='dropdown-item' href='profile.php'> <i class='fas fa-user-cog'></i> Hồ sơ </a> <br>
+                          <a class='dropdown-item' href='changePassword.php'><i class='fas fa-key'></i> Đổi mật khẩu </a> <br>
+                          <a class='dropdown-item' href='logout.php'><i class='fas fa-sign-out-alt'></i> Đăng xuất </a>
+                        </div>
+                      </div>";
                                     }else{
                                         ?>
                                 <span class="login-logout">
-                                    <li><a title="Đăng nhập" href="login.php"><i class="fa fa-user"></i> Đăng nhập</a>
+                                    <li><a title="Đăng nhập" href="login.php"><i class="fa fa-user"></i> Đăng
+                                            nhập</a>
                                     </li>
-                                    <li><a title="Đăng kí" href="register.php"><i class="fa fa-lock"></i> Đăng ký</a>
+                                    <li><a title="Đăng kí" href="register.php"><i class="fa fa-lock"></i> Đăng
+                                            ký</a>
                                     </li>
                                 </span>
                                 <?php
@@ -130,7 +136,13 @@ if(!isset($_SESSION)) { session_start(); }
                                 </li>
                                 <?php }?>
                                 <li><a href="info.php" id="home"><i class="fas fa-home"></i> Giới Thiệu</a></li>
-                                <!-- <li><a href="#"><i class="fab fa-hotjar"></i> bán chạy</a></li> -->
+                                <?php
+                                    if(isset($_SESSION['user'])){
+                                        
+                                            echo "<li><a href='#'><i class='fab fa-hotjar'></i> Đơn Hàng</a></li>";
+                                            
+                                    }
+                                ?>
                             </ul>
 
                         </div>
