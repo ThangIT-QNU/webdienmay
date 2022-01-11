@@ -152,7 +152,7 @@ require './layout/header.php';
                         </div>
                     </div>
                 </div>
-                <a href="#">
+                <a href="./modules/user/index.php">
                     <div class="panel-footer">
                         <span class="pull-left">Xem Chi Tiết</span>
                         <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
