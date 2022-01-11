@@ -54,6 +54,9 @@ if(!isset($_SESSION['login'])){
                         <?php if(isset($_SESSION['login'])) echo $_SESSION['login'] ?> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
+                            <a href="changePassword.php"><i class="fa fa-fw fa-key"></i> Đổi mật khẩu</a>
+                        </li>
+                        <li>
                             <a href="logout.php"><i class="fa fa-fw fa-power-off"></i> Đăng Xuất</a>
                         </li>
                     </ul>

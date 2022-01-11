@@ -46,15 +46,15 @@ if(!isset($_SESSION)) { session_start(); }
                                     if(isset($_SESSION['user'])){
                                 
                                     echo "<div class='dropdown'>
-                        <button class='btn btn-success dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-                        <i class='fas fa-user-alt'></i>&nbsp; ".$_SESSION['user']."
-                        </button>
-                        <div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
-                          <a class='dropdown-item' href='profile.php'> <i class='fas fa-user-cog'></i> Hồ sơ </a> <br>
-                          <a class='dropdown-item' href='changePassword.php'><i class='fas fa-key'></i> Đổi mật khẩu </a> <br>
-                          <a class='dropdown-item' href='logout.php'><i class='fas fa-sign-out-alt'></i> Đăng xuất </a>
-                        </div>
-                      </div>";
+                                        <button class='btn btn-success dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                                        <i class='fas fa-user-alt'></i>&nbsp; ".$_SESSION['user']."
+                                        </button>
+                                        <div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
+                                        <a class='dropdown-item' href='profile.php'> <i class='fas fa-user-cog'></i> Hồ sơ </a> <br>
+                                        <a class='dropdown-item' href='changePass.php'><i class='fas fa-key'></i> Đổi mật khẩu </a> <br>
+                                        <a class='dropdown-item' href='logout.php'><i class='fas fa-sign-out-alt'></i> Đăng xuất </a>
+                                        </div>
+                                    </div>";
                                     }else{
                                         ?>
                                 <span class="login-logout">
@@ -139,7 +139,7 @@ if(!isset($_SESSION)) { session_start(); }
                                 <?php
                                     if(isset($_SESSION['user'])){
                                         
-                                            echo "<li><a href='#'><i class='fab fa-hotjar'></i> Đơn Hàng</a></li>";
+                                            echo "<li><a href='history.php'><i class='fab fa-hotjar'></i> Đơn Hàng</a></li>";
                                             
                                     }
                                 ?>

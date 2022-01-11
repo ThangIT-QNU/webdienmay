@@ -23,6 +23,9 @@ if(isset($_POST['login'])){
         session_start();
         if(password_verify($pass,$pass_hash)){
             $_SESSION['user'] = $username;
+            $_SESSION['pass'] = $pass_hash;
+            // var_dump($pass_hash);
+            // exit();
             header('location:index.php');
         }else{
             $error_password = "Sai Mật Khẩu.";
