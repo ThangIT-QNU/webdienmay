@@ -8,78 +8,138 @@ require 'layout/header.php';
         <center><span>Giới Thiệu</span></center>
     </div>
     <div class="col-md-4">
-        <div class="product" style="height: 335px">
+        <div class=" product" style="height: 150px">
             <div class="col-xs-12">
                 <div class="product-image">
-                    <center><a href="detail.php?id_product=<?php echo $value_cate_manu['id'] ?>"><img
-                                style="border-radius:50%" width="100%" src="public/image/apple.jpg ?>"
-                                alt="image-product"></a></center>
-                </div> <br>
+                    <center><a href=""><img style="border-radius:40%" width="50%" src="public/image/apple.jpg ?>"
+                                alt="image-product"></a>
+                    </center>
+                </div>
             </div>
+            <div class="product-name">
+                <center><a href="">
+                        <h5>ĐINH THÀNH THẮNG</h5>
+                    </a> </center>
+            </div>
+            <div class="mssv">
+                <b>MSSV: </b> 4151050114
+            </div>
+            <div class="class">
+                <b>Lớp: </b> CNTT_K41B
+            </div>
+        </div>
+    </div>
 
+    <div class="col-md-4">
+        <div class="product" style="height: 150px">
+            <div class="col-xs-12">
+                <div class="product-image">
+                    <center><a href=""><img style="border-radius:40%" width="50%" src="public/image/apple.jpg ?>"
+                                alt="image-product"></a>
+                    </center>
+                </div>
+            </div>
             <div class="product-name">
                 <center><a href="">
-                        <h5>HUỲNH ĐẠI LONG</h5>
+                        <h5>LÊ PHƯỚC SÁNG</h5>
                     </a> </center>
             </div>
             <div class="mssv">
-                <b>MSSV: </b> 18211TT1949
+                <b>MSSV: </b> 4151050119
             </div>
             <div class="class">
-                <b>Lớp: </b> CD18TT3
+                <b>Lớp: </b> CNTT_K41B
             </div>
-            <div class="email">
-                <b>Email: </b> huynhdailong@gmail.com
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="product" style="height: 150px">
+            <div class="col-xs-12">
+                <div class="product-image">
+                    <center><a href=""><img style="border-radius:40%" width="50%" src="public/image/apple.jpg ?>"
+                                alt="image-product"></a>
+                    </center>
+                </div>
+            </div>
+            <div class="product-name">
+                <center><a href="">
+                        <h5>HUỲNH VẠN TOÀN</h5>
+                    </a> </center>
+            </div>
+            <div class="mssv">
+                <b>MSSV: </b> 4151050084
+            </div>
+            <div class="class">
+                <b>Lớp: </b> CNTT_K41B
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="product" style="height: 150px">
+            <div class="col-xs-12">
+                <div class="product-image">
+                    <center><a href=""><img style="border-radius:40%" width="50%" src="public/image/apple.jpg ?>"
+                                alt="image-product"></a>
+                    </center>
+                </div>
+            </div>
+            <div class="product-name">
+                <center><a href="">
+                        <h5>MAI THỊ CHI</h5>
+                    </a> </center>
+            </div>
+            <div class="mssv">
+                <b>MSSV: </b> 4151050210
+            </div>
+            <div class="class">
+                <b>Lớp: </b> CNTT_K41B
             </div>
         </div>
     </div>
     <div class="col-md-4">
-        <div class="product" style="height: 335px">
+        <div class="product" style="height: 150px">
             <div class="col-xs-12">
                 <div class="product-image">
-                    <center><a href="detail.php?id_product=<?php echo $value_cate_manu['id'] ?>"><img
-                                style="border-radius:50%" width="100%" src="public/image/apple.jpg ?>"
-                                alt="image-product"></a></center>
-                </div> <br>
+                    <center><a href=""><img style="border-radius:40%" width="50%" src="public/image/apple.jpg ?>"
+                                alt="image-product"></a>
+                    </center>
+                </div>
             </div>
             <div class="product-name">
                 <center><a href="">
-                        <h5>Phạm Văn Hiệu</h5>
+                        <h5>TRẦN THỊ THANH TUYỀN</h5>
                     </a> </center>
             </div>
             <div class="mssv">
-                <b>MSSV: </b> 18211TT0435
+                <b>MSSV: </b> 4151050114
             </div>
             <div class="class">
-                <b>Lớp: </b> CD18TT3
-            </div>
-            <div class="email">
-                <b>Email: </b> vanhieutdc6@gmail.com
+                <b>Lớp: </b> CNTT_K41B
             </div>
         </div>
     </div>
+
     <div class="col-md-4">
-        <div class="product" style="height: 335px">
+        <div class="product" style="height: 150px">
             <div class="col-xs-12">
                 <div class="product-image">
-                    <center><a href="detail.php?id_product=<?php echo $value_cate_manu['id'] ?>"><img
-                                style="border-radius:50%" width="100%" src="public/image/apple.jpg ?>"
-                                alt="image-product"></a></center>
-                </div> <br>
+                    <center><a href=""><img style="border-radius:40%" width="50%" src="public/image/apple.jpg ?>"
+                                alt="image-product"></a>
+                    </center>
+                </div>
             </div>
             <div class="product-name">
                 <center><a href="">
-                        <h5>Nguyễn Đức Duy</h5>
+                        <h5>NGUYỄN THANH BÌNH</h5>
                     </a> </center>
             </div>
             <div class="mssv">
-                <b>MSSV: </b> 18211TT1924
+                <b>MSSV: </b> 4151050114
             </div>
             <div class="class">
-                <b>Lớp: </b> CD18TT3
-            </div>
-            <div class="email">
-                <b>Email: </b>nguyenducduy@gmail.com
+                <b>Lớp: </b> CNTT_K41B
             </div>
         </div>
     </div>
