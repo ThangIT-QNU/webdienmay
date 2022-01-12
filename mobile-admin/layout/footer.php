@@ -5,7 +5,7 @@
 <div class="row">
     <div class="text-center">
         <footer style="background: none; color: #000; padding: 15px 0px;font-size: 1.3em	">
-            &copy; 2019 || Admin-Nhóm 1
+            &copy; 2022 || Admin - Nhóm 6 Phát Triển Phần Mềm Nguồn Mở
         </footer>
     </div>
 </div>
